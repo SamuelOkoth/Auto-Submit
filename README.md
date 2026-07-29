@@ -1,4 +1,4 @@
-# Remotasks Auto-submit
+# Auto-submit
 
 This Chrome extension automatically submits tasks on when the timer ends.
 
