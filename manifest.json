@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Remotasks Auto-submit",
+    "version": "1.0",
+    "permissions": ["tabs", "notifications", "storage"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "options.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.remotasks.com/tasks",
+                "*://remotasks.com/tasks",
+                "*://*.remotasks.com/*/tasks",
+                "*://remotasks.com/*/tasks",
+                "*://app.tryoutlier.com/*/expert/tasks",
+                "*://app.tryoutlier.com/expert/tasks"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "options_page": "options.html",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    }
+}
